@@ -74,10 +74,10 @@ public class Calculator {
                     Double exp_res = CalculationHelpers.getExponentialValue(expD.doubleValue());
                     return getStringifyResult(exp_res);
                 default:
-                    return null;
+                    return "0";
             }
         } catch (Exception e) {
-            return null;
+            return "0";
         }
     }
 
