@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Calculator N01502504</string>
+    <string name="tvOperationDefault">0</string>
+    <string name="tvCalcAnswerDefault">Answer: 0</string>
+    <string name="CalcHeading">Calculator</string>
+    <string name="imgCellDesc">Calculator Cell</string>
+
+    <!--First Row-->
+    <string name="btnMP">M+</string>
+    <string name="btnMM">M-</string>
+    <string name="btnMR">MR</string>
+    <string name="btnMC">MC</string>
+
+    <!--Second Row-->
+    <string name="btnAC">AC</string>
+    <string name="btnSQRT">√</string>
+    <string name="btnMOD">%</string>
+    <string name="btnDIV">/</string>
+
+    <!--Third Row-->
+    <string name="btn31">7</string>
+    <string name="btn32">8</string>
+    <string name="btn33">9</string>
+    <string name="btn34">x</string>
+
+    <!--Fourth Row-->
+    <string name="btn41">4</string>
+    <string name="btn42">5</string>
+    <string name="btn43">6</string>
+    <string name="btn44">-</string>
+
+    <!--Fifth Row-->
+    <string name="btn51">1</string>
+    <string name="btn52">2</string>
+    <string name="btn53">3</string>
+    <string name="btn54">+</string>
+
+    <!--Sixth Row-->
+    <string name="btn61">0</string>
+    <string name="btn62">00</string>
+    <string name="btn63">.</string>
+    <string name="btn64">=</string>
+
+    <!--Seventh Row-->
+    <string name="btnPI">π</string>
+    <string name="btnEXP">eˣ</string>
+    <string name="btnSQR">x²</string>
+    <string name="btnFACT">x!</string>
+</resources>

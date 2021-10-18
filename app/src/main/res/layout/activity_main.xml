@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvOperation"
+        style="@style/baseCalcFont"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLength="15"
+        android:paddingStart="0dp"
+        android:paddingEnd="4dp"
+        android:text="@string/tvOperationDefault"
+        android:textAlignment="viewEnd"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.066" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvOperation"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/app_btn_color">
+
+            <Button
+                android:id="@+id/btn11"
+                style="@style/btnStyleMainCorner1"
+                android:layout_width="wrap_content"
+                android:onClick="onMemoryOprListener"
+                android:tag="btnMC"
+                android:text="@string/btnMC" />
+
+            <Button
+                android:id="@+id/btn12"
+                style="@style/btnStyleMainCorner1"
+                android:layout_width="wrap_content"
+                android:onClick="onMemoryOprListener"
+                android:tag="btnMP"
+                android:text="@string/btnMP" />
+
+            <Button
+                android:id="@+id/btn13"
+                style="@style/btnStyleMainCorner1"
+                android:layout_width="wrap_content"
+                android:onClick="onMemoryOprListener"
+                android:tag="btnMM"
+                android:text="@string/btnMM" />
+
+            <Button
+                android:id="@+id/btn14"
+                style="@style/btnStyleMainCorner1"
+                android:layout_width="wrap_content"
+                android:onClick="onMemoryOprListener"
+                android:tag="btnMR"
+                android:text="@string/btnMR" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/app_btn_color">
+
+            <Button
+                android:id="@+id/btn21"
+                style="@style/btnStyleMain"
+                android:layout_width="wrap_content"
+                android:onClick="onExtraOprListener"
+                android:tag="btnAC"
+                android:text="@string/btnAC" />
+
+            <Button
+                android:id="@+id/btn22"
+                style="@style/btnStyleMain"
+                android:layout_width="wrap_content"
+                android:onClick="onExtraOprListener"
+                android:tag="btnSQRT"
+                android:text="@string/btnSQRT" />
+
+            <Button
+                android:id="@+id/btn23"
+                style="@style/btnStyleMain"
+                android:layout_width="wrap_content"
+                android:onClick="onArithmeticOprListener"
+                android:tag="btnMOD"
+                android:text="@string/btnMOD" />
+
+            <Button
+                android:id="@+id/btn24"
+                style="@style/btnStyleMainCorner1"
+                android:layout_width="wrap_content"
+                android:onClick="onArithmeticOprListener"
+                android:tag="btnDIV"
+                android:text="@string/btnDIV" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/app_btn_color_gray">
+
+            <Button
+                android:id="@+id/btn31"
+                style="@style/btnStyleMain"
+                android:layout_width="wrap_content"
+                android:onClick="onNumericsListener"
+                android:text="@string/btn31" />
+
+            <Button
+                android:id="@+id/btn32"
+                style="@style/btnStyleMain"
+                android:layout_width="wrap_content"
+                android:onClick="onNumericsListener"
+                android:text="@string/btn32" />
+
+            <Button
+                android:id="@+id/btn33"
+                style="@style/btnStyleMain"
+                android:layout_width="wrap_content"
+                android:onClick="onNumericsListener"
+                android:text="@string/btn33" />
+
+            <Button
+                android:id="@+id/btn34"
+                style="@style/btnStyleMainCorner1"
+                android:layout_width="wrap_content"
+                android:onClick="onArithmeticOprListener"
+                android:text="@string/btn34"
+                android:textAllCaps="false" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/app_btn_color_gray">
+
+            <Button
+                android:id="@+id/btn41"
+                style="@style/btnStyleMain"
+                android:layout_width="wrap_content"
+                android:onClick="onNumericsListener"
+                android:text="@string/btn41" />
+
+            <Button
+                android:id="@+id/btn42"
+                style="@style/btnStyleMain"
+                android:layout_width="wrap_content"
+                android:onClick="onNumericsListener"
+                android:text="@string/btn42" />
+
+            <Button
+                android:id="@+id/btn43"
+                style="@style/btnStyleMain"
+                android:layout_width="wrap_content"
+                android:onClick="onNumericsListener"
+                android:text="@string/btn43" />
+
+            <Button
+                android:id="@+id/btn44"
+                style="@style/btnStyleMainCorner1"
+                android:layout_width="wrap_content"
+                android:onClick="onArithmeticOprListener"
+                android:text="@string/btn44" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/app_btn_color_gray">
+
+            <Button
+                android:id="@+id/btn51"
+                style="@style/btnStyleMain"
+                android:layout_width="wrap_content"
+                android:onClick="onNumericsListener"
+                android:text="@string/btn51" />
+
+            <Button
+                android:id="@+id/btn52"
+                style="@style/btnStyleMain"
+                android:layout_width="wrap_content"
+                android:onClick="onNumericsListener"
+                android:text="@string/btn52" />
+
+            <Button
+                android:id="@+id/btn53"
+                style="@style/btnStyleMain"
+                android:layout_width="wrap_content"
+                android:onClick="onNumericsListener"
+                android:text="@string/btn53" />
+
+            <Button
+                android:id="@+id/btn54"
+                style="@style/btnStyleMainCorner1"
+                android:layout_width="wrap_content"
+                android:onClick="onArithmeticOprListener"
+                android:text="@string/btn54" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/app_btn_color_gray">
+
+            <Button
+                android:id="@+id/btn61"
+                style="@style/btnStyleMain"
+                android:layout_width="wrap_content"
+                android:onClick="onNumericsListener"
+                android:text="@string/btn61" />
+
+            <Button
+                android:id="@+id/btn62"
+                style="@style/btnStyleMain"
+                android:layout_width="wrap_content"
+                android:onClick="onNumericsListener"
+                android:text="@string/btn62" />
+
+            <Button
+                android:id="@+id/btn63"
+                style="@style/btnStyleMain"
+                android:layout_width="wrap_content"
+                android:onClick="onNumericsListener"
+                android:text="@string/btn63" />
+
+            <Button
+                android:id="@+id/btn64"
+                style="@style/btnStyleMainCorner1"
+                android:layout_width="wrap_content"
+                android:onClick="calculateOperation"
+                android:text="@string/btn64" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/app_btn_color_gray">
+
+            <Button
+                android:id="@+id/btn71"
+                style="@style/btnStyleMain"
+                android:layout_width="wrap_content"
+                android:onClick="onExtraOprListener"
+                android:tag="btnPI"
+                android:text="@string/btnPI" />
+
+            <Button
+                android:id="@+id/btn72"
+                style="@style/btnStyleMain"
+                android:layout_width="wrap_content"
+                android:onClick="onExtraOprListener"
+                android:tag="btnEXP"
+                android:text="@string/btnEXP" />
+
+            <Button
+                android:id="@+id/btn73"
+                style="@style/btnStyleMain"
+                android:layout_width="wrap_content"
+                android:onClick="onExtraOprListener"
+                android:tag="btnSQR"
+                android:text="@string/btnSQR" />
+
+            <Button
+                android:id="@+id/btn74"
+                style="@style/btnStyleMainCorner1"
+                android:layout_width="wrap_content"
+                android:onClick="onExtraOprListener"
+                android:tag="btnFACT"
+                android:text="@string/btnFACT" />
+        </TableRow>
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
