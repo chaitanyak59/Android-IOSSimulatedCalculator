@@ -59,4 +59,8 @@ public class CalculationHelpers {
     public static Double mod(Double opr_a, Double opr_b) {
         return opr_a % opr_b;
     }
+
+    public static BigDecimal getPICalculation(BigDecimal input) {
+        return input.multiply(new BigDecimal("3.14"));
+    }
 }

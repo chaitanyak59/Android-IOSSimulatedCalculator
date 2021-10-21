@@ -1,6 +1,7 @@
 package com.cpasnoor.humberfinalcalculator;
 
 import static helpers.CalculationHelpers.div;
+import static helpers.CalculationHelpers.getPICalculation;
 import static helpers.CalculationHelpers.isValid;
 import static helpers.CalculationHelpers.mod;
 import static helpers.CalculationHelpers.mul;
@@ -8,8 +9,6 @@ import static helpers.CalculationHelpers.sub;
 import static helpers.CalculationHelpers.sum;
 import static helpers.CalculationHelpers.toBigDecimal;
 import static helpers.CalculationHelpers.toDouble;
-
-import android.util.Log;
 
 import androidx.annotation.NonNull;
 
@@ -49,10 +48,9 @@ public class Calculator {
         this.currentArithmeticOperation = currentArithmeticOperation;
     }
 
-    public String performUnaryOperations(int operationID, @NonNull String currValue) {
+    public String performUnaryOperations(int ID, @NonNull String currValue) {
         try {
-            switch (operationID) {
-                //TODO Change below hardcoded to string resources, also change stringbutton ids
+            switch (ID) {
                 case R.string.btnAC:
                     //RESET ...
                     resetActivity();
@@ -73,6 +71,10 @@ public class Calculator {
                     BigDecimal expD = getFilteredInput(currValue);
                     Double exp_res = CalculationHelpers.getExponentialValue(expD.doubleValue());
                     return getStringifyResult(exp_res);
+                case R.string.btnPI:
+                    BigDecimal pi_input = getFilteredInput(currValue);
+                    BigDecimal pi_res = getPICalculation(pi_input);
+                    return getStringifyResult(pi_res.doubleValue());
                 default:
                     return "0";
             }
@@ -84,7 +86,7 @@ public class Calculator {
     public String performArithOperations() {
         String operation = getOperationStatus();
         try {
-            if((isValid(getOperandA()) && isValid(getOperandB()))) {
+            if ((isValid(getOperandA()) && isValid(getOperandB()))) {
                 BigDecimal a = toBigDecimal(getOperandA());
                 BigDecimal b = toBigDecimal(getOperandB());
                 switch (operation) {
@@ -135,8 +137,9 @@ public class Calculator {
             return "Operation Error";
         }
     }
+
     public void updateOperandsByStatus(String value, Boolean forceUpdate) {
-        if(forceUpdate || getOperandA().isEmpty()) {
+        if (forceUpdate || getOperandA().isEmpty()) {
             setOperandA(value);
         } else {
             setOperandB(value);
